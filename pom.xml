@@ -34,7 +34,7 @@
     <build>
         <testResources>
             <testResource>
-                <directory>src/test/resources</directory>
+                <directory>src</directory>
             </testResource>
         </testResources>
         <pluginManagement>
