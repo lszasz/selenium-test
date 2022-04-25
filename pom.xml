@@ -32,11 +32,7 @@
     </dependencies>
 
     <build>
-        <testResources>
-            <testResource>
-                <directory>src</directory>
-            </testResource>
-        </testResources>
+        <sourceDirectory>src</sourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
