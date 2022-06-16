@@ -17,13 +17,12 @@ public class ReproIssueTest {
 
         driver = Driver.getDriver();
         driver.navigate().to("https://github.com/lszasz/selenium-test");
-
-        System.out.print("Clicking element");
         Thread.sleep(320000);
         int retry = 0;
         do {
             retry++;
             try {
+                System.out.print("Clicking element");
                 driver.findElement(By.xpath("//*[contains(concat(' ', @class, ' '), ' x-component ') and contains(concat(' ', @class, ' '), ' x-fit-item ') and not(contains(@class, 'x-hidden-offsets'))]//*[contains(concat(' ', @class, ' '), ' x-panel ') and not(contains(@class, 'x-hidden-offsets')) and count(.//*[contains(concat(' ', @class, ' '), ' x-toolbar ') and count(.//h3[contains(concat(' ', @class, ' '), ' x-toolbar-item ') and contains(text(),'Bwb_simple_trapr25164550427.txt')]) > 0]) > 0]//*[contains(concat(' ', @class, ' '), ' x-tab-bar ') and count(.//a[contains(concat(' ', @class, ' '), ' x-tab-active ') and count(*//text()[.='Details']) > 0]) > 0]//following-sibling::*[contains(concat(' ', @class, ' '), ' x-panel-body ')]/*[contains(concat(' ', @class, ' '), ' x-tabpanel-child ') and not(contains(@class, 'x-hidden-offsets'))]//*[contains(concat(' ', @class, ' '), ' x-toolbar ')]//a[contains(concat(' ', @class, ' '), ' x-btn ') and (count(*//text()[contains(.,'Download Package')]) > 0 or count(*//text()[contains(.,'Download Source File')]) > 0 or count(*//text()[contains(.,'Download SDLXLIFF')]) > 0) and count(.//*[contains(concat(' ', @class, ' '), ' fa-download  ')]) > 0]")).click();
             } catch (Exception e) {
                 System.out.print(e.toString());
