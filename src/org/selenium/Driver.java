@@ -35,8 +35,6 @@ public class Driver {
 
     private static WebDriver createDriver(URL remoteUrl) throws IOException {
         ChromeOptions capabilities = new ChromeOptions();
-        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
         driver = new RemoteWebDriver(remoteUrl, capabilities);
         return driver;
     }
